@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+:root {
+  font-size: 62.5%;
+  background: #1e1e1e;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+}
+h2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.container p {
+  opacity: 67%;
+  color: #fff;
+  font-size: 1.9rem;
+}
+
+.tipos-botoes {
+  padding: 0 7.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+
+aside {
+  background: #130f1e;
+  height: 100vh;
+  padding: 0 4.4rem;
+}
+.desc-testes-botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 10rem;
+}
+.desc-testes-botoes span {
+  color: #c19518;
+  font-size: 1.6rem;
+}
+
+table {
+  background: #130f1e;
+  border-radius: 0.8rem;
+  padding: 0 0.5rem 0.5rem 0;
+}
+table td {
+  background: #0b0911;
+  padding: 0 3.2rem;
+  text-align: -webkit-center;
+}
+table th {
+  padding: 1.8rem 3rem;
+}
+table tr {
+  height: 9.2rem;
+}
+.col-superior {
+  height: 6.4rem;
+}
+.col-superior th {
+  padding: 1.5rem;
+}
+
+button {
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.4rem;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.4rem;
+  border: none;
+}
+
+.primary {
+  background: #8257e5;
+}
+.secondary {
+  background: #3c3748;
+}
+.tertiary {
+  background: transparent;
+}
+
+.btn-hover .primary {
+  background: #9674e5;
+}
+.btn-hover .secondary {
+  background: #6a617f;
+}
+.btn-focus button {
+  border: 1px solid #fff;
+}
+
+.btn-disable button {
+  filter: brightness(0.5);
+}
+
+tr:hover td {
+  background-color: #ffffff28;
+  cursor: pointer;
+}
+
+.mostra-btns {
+  display: flex;
+  gap: 3.2rem;
+  flex-direction: column;
+  margin-top: 3.2rem;
+}
+.mostra-btns button {
+  cursor: pointer;
+}
+
+.mostra-btns .default:hover {
+  cursor: pointer;
+}
+.mostra-btns .hover:nth-child(1):hover {
+  background: #9674e5;
+}
+.mostra-btns .hover:nth-child(2):hover {
+  background: #6a617f;
+}
+
+.mostra-btns .focus:focus {
+  border: 1px solid #fff;
+}
+
+.mostra-btns .disabled {
+  cursor: not-allowed;
+  filter: brightness(0.5);
+}
+
+.mostra-btns .loading {
+  cursor: wait;
+}
+.mostra-btns .movable {
+  cursor: crosshair;
+}

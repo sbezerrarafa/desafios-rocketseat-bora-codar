@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio-1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="estilos">
+      <p>Escolha o tema:</p>
+      <div>
+        <button>1</button>
+        <button>2</button>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div id="temas" class="layout-vertical">
+      <div class="conteudo-musica">
+        <img src="./assets/fundo-musica.png" alt="">
+        <div class="desc-musica">
+          <p>Pra onde eu irei?</p>
+          <span>Morada</span>
+        </div>
+      </div>
+      <div class="controles">
+        <button><img src="./assets/voltar.png" alt=""></button>
+        <button id="play"><img src="./assets/play.png" alt=""></button>
+        <button id="pause" class="hide"><svg xmlns="http://www.w3.org/2000/svg" style="width: 17px; " viewBox="0 0 320 512">
+            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z" fill="#E1E1E6"></path>
+          </svg></button>
+        <button id="next"><img src="./assets/avancar.png" alt=""></button>
+      </div>
+      <div class="container-progresso">
+        <div class="barra-progresso"></div>
+        <div class="tempo-musica">
+          <span>03:20</span>
+          <span>00:14</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js" type="module" defer></script>
+</body>
+
+</html>

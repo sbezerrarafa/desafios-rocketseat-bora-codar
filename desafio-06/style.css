@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  background: linear-gradient(167.96deg, #8257e5 0%, #271a45 100%) no-repeat;
+}
+
+section {
+  background: #fff;
+}
+.ticket {
+  margin: 2rem 0;
+}
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.container h1 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+.texto-rodape {
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 300;
+  opacity: 80%;
+  line-height: 2.2rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 2.4rem 2.4rem 0 0;
+  padding: 2.4rem 3.2rem;
+  -webkit-mask: radial-gradient(1.2rem at 1.2rem bottom, transparent 93%, black) -1.2rem;
+}
+
+.top span {
+  font-size: 1.4rem;
+  opacity: 64%;
+}
+.top strong {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 4.7rem;
+  color: rgba(0, 0, 0, 0.88);
+}
+.top p {
+  font-size: 1.6rem;
+  opacity: 80%;
+  font-weight: 500;
+}
+
+.top .topo,
+.destino {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.destino img {
+  margin-left: 2rem;
+}
+.start,
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.end {
+  align-items: flex-end;
+}
+
+.top .topo p {
+  font-weight: bold;
+  font-size: 1.6rem;
+  opacity: 88%;
+}
+
+.middle {
+  padding: 3.2rem 2.4rem;
+  border-top: 1px dashed #8d8d8d;
+  border-bottom: 1px dashed #8d8d8d;
+  -webkit-mask: radial-gradient(1.2rem at 1.2rem 1.2rem, transparent 93%, black) -1.2rem -1.2rem;
+}
+.middle div {
+  display: flex;
+  justify-content: space-between;
+}
+.middle span {
+  font-size: 1.4rem;
+  opacity: 64%;
+}
+.middle p {
+  margin-top: 0.2rem;
+  font-weight: bold;
+  opacity: 88%;
+  font-size: 1.6rem;
+}
+
+.bottom {
+  padding: 3.2rem 2.4rem;
+  border-radius: 0 0 2.4rem 2.4rem;
+  -webkit-mask: radial-gradient(1.2rem at 1.2rem top, transparent 93%, black) -1.2rem;
+}
+.container-desc-embarque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom span {
+  opacity: 64%;
+  font-size: 1.4rem;
+}
+.bottom p {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  opacity: 88%;
+}
+.bottom h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 2rem;
+}
+.horario-embarque p {
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  background: #633bbc;
+  text-align: center;
+  border-radius: 0.8rem;
+  margin-top: 0.2rem;
+}
+.desc-qr-code img {
+  width: 16rem;
+  height: 16rem;
+}
+.desc-qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc-embarque {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}

@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+main {
+  background: url(../assets/bg.jpeg) no-repeat center/cover;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 6.4rem;
+  gap: 2.4rem;
+  grid-template-columns: 48rem 27.7rem 27.7rem;
+  grid-template-rows: 24.4rem 21.2rem;
+  /* estas alturas das row são referentes as alturas dos cards secundarios */
+}
+
+section {
+  font-family: 'Lato', sans-serif;
+  background: #6d67d0;
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+}
+
+/* clima atual */
+
+.clima-atual {
+  background: url(../assets/bg-temp-now.jpeg);
+  grid-row: 1/3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.clima-atual::before {
+  content: '';
+  width: 17.6rem;
+  height: 17.6rem;
+  background: url(../assets/clouds.svg) no-repeat;
+  position: absolute;
+  top: -5.6rem;
+  left: -5.6rem;
+  animation: go-back 1.7s infinite alternate;
+}
+
+@keyframes go-back {
+  from {
+    transform: translateX(40px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.clima-atual .rodape {
+  display: flex;
+  padding: 1.2rem;
+  gap: 0.8rem;
+}
+
+.descricao {
+  display: flex;
+  align-items: center;
+  color: #dad8f7;
+  position: absolute;
+  margin-top: 6.3rem;
+  margin-left: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.localizacao {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: end;
+  color: #c2bff4;
+  padding: 3.2rem;
+}
+.form h3 {
+  text-align: end;
+  margin-bottom: 0.5rem;
+}
+.sua-cidade {
+  display: flex;
+  align-items: center;
+}
+.form-input-container {
+  display: flex;
+  gap: 0.2rem;
+}
+.form-input-container input {
+  border: none;
+  border-radius: 0.3rem;
+  color: #aaa5fd;
+  padding: 0.5rem;
+}
+.form-input-container button {
+  background: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  width: 2.9rem;
+  height: 2.9rem;
+}
+.form-input-container button img {
+  width: 1.6rem;
+}
+
+.temperatura {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 7rem;
+}
+.temperatura .temp-atual {
+  display: flex;
+}
+
+.temp-atual h2 {
+  color: #fff;
+  font-size: 8.8rem;
+  font-weight: bold;
+}
+.temp-atual .celsius {
+  font-size: 2.4rem;
+  color: #dad8f7;
+  font-weight: bold;
+  margin-top: 1.8rem;
+}
+.temperatura .max-min {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+}
+.max-min span {
+  color: #c2bff4;
+}
+.hide {
+  visibility: hidden;
+}
+
+.selecione-cidade,
+#error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+#error-message {
+  color: #e5bb46;
+}
+
+.desaparecer {
+  display: none !important;
+}
+.rodape .estatisticas {
+  color: #e7e6fb;
+  gap: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: rgba(102, 96, 200, 0.6);
+  padding: 1.4rem 1.6rem;
+  border-radius: 1rem;
+}
+.rodape .estatisticas p {
+  font-size: 1.2rem;
+}
+.rodape .estatisticas span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* qualidade do ar */
+
+.qualidade-ar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.titulo-qualidade-ar,
+.titulo-horario-sol {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-top: 3.2rem;
+}
+.titulo-qualidade-ar h5,
+.titulo-horario-sol h5 {
+  color: #dad8f7;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.qualidade-ar-atual {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qualidade-ar-atual p {
+  color: #87ebcd;
+  font-size: 1.8rem;
+}
+.qualidade-ar span {
+  color: #e7e6fb;
+  font-size: 4rem;
+}
+.info-composicao-ar {
+  display: flex;
+  padding: 1.6rem;
+  width: 100%;
+  justify-content: space-around;
+}
+.info-composicao-ar .number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+}
+.info-composicao-ar .number p {
+  color: #87ebcd;
+  font-size: 1.4rem;
+}
+.info-composicao-ar .number small {
+  color: #e7e6fb;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+
+/* horario sol */
+.container-horario-sol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-horario-sol {
+  margin-bottom: 3.5rem;
+}
+
+.container-grafico-sol {
+  position: relative;
+  height: 100px;
+  width: 200px;
+}
+.grafico-sol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 110px;
+  width: 200px;
+  margin-top: -40px;
+  margin-left: -100px;
+  border-radius: 0 0 100px 100px;
+  transform: rotate(180deg);
+  border: 1px dashed #e5bb46;
+  background: linear-gradient(
+    180deg,
+    rgba(251, 219, 96, 0.2) 0%,
+    rgba(251, 219, 96, 0) 101.89%
+  );
+  overflow: hidden;
+  z-index: -1;
+}
+.sombra-sol {
+  background: #6d67d0;
+  height: 110px;
+}
+
+.horario-sol-valor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 3;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+}
+
+.bolinha-grafico-sol {
+  position: absolute;
+  top: 105px;
+  left: -9px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #e5bb46;
+}
+
+.base-horario-sol {
+  margin-top: 30px;
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+}
+
+/* previsão da semana */
+
+.previsao-semanal {
+  grid-column: 2/4;
+  display: flex;
+  padding: 4rem;
+  justify-content: space-between;
+}
+.dias-da-semana {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+}
+.dias-da-semana span {
+  color: #c2bff4;
+}
+.max-min-semana {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-geral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .qualidade-ar,
+  .container-horario-sol,
+  .previsao-semanal {
+    width: 100%;
+  }
+  .rodape {
+    flex-wrap: wrap;
+  }
+  .descricao {
+    display: none;
+  }
+  .previsao-semanal {
+    flex-wrap: wrap;
+  }
+}

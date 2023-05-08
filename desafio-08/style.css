@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  background: #292738;
+  color: #fff;
+}
+.container {
+  max-width: 112rem;
+  margin: 10rem auto;
+}
+.dados-gerais {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: 29.6rem 35.1rem 40.9rem;
+  height: 37.9rem;
+}
+.dados-gerais h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.emoji img {
+  width: 5.4rem;
+}
+.emoji p {
+  color: #81fbb8;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.dados-gerais span {
+  font-size: 1.4rem;
+}
+.dados-gerais img:nth-child(2) {
+  width: 19.7rem;
+  height: 19.7rem;
+}
+.nps,
+.vendas-fechadas,
+.meta-mensal {
+  padding: 2.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.6rem;
+  background-color: #363447;
+  box-shadow: 0.3rem 0.4rem 2.6rem rgba(0, 0, 0, 0.25);
+}
+
+.estatiscas-vendas {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.estatiscas-vendas span,
+.dados-semanais p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.estatiscas-vendas span:first-child::before {
+  display: inline-flex;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #4a4556;
+  border-radius: 50%;
+}
+.estatiscas-vendas span:last-child::before {
+  display: inline-flex;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(121.94deg, #ce9ffc 15.98%, #7367f0 82.85%);
+}
+
+.estatiscas-metas span:last-child::before {
+  display: inline-flex;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(121.94deg, #df9780 15.98%, #a66de9 82.85%);
+}
+
+.vendas-semanais {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #363447;
+  box-shadow: 0.3rem 0.4rem 2.6rem rgba(0, 0, 0, 0.25);
+  padding: 2.9rem 4.8rem;
+  margin-top: 5.9rem;
+  border-radius: 1.6rem;
+}
+.vendas-semanais img {
+  max-width: 52rem;
+}
+
+.dados-semanais {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dados-semanais h2 {
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.dados-semanais span {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.dados-semanais p:nth-child(2)::before {
+  display: inline-flex;
+  content: '';
+  width: 13px;
+  height: 13px;
+  background: url(./assets/up.png);
+}
+.dados-semanais p:nth-child(4)::before {
+  display: inline-flex;
+  content: '';
+  width: 13px;
+  height: 12px;
+  background: url(./assets/donw.png);
+}
+
+/*  circular */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .dados-gerais {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .vendas-semanais {
+    flex-direction: column;
+  }
+  .vendas-semanais img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Crimson Pro', serif;
+}
+
+:root {
+  font-size: 62.5%;
+  background: #d9cdf7;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+.img-destaque {
+  display: flex;
+}
+.img-destaque img {
+  width: 45rem;
+  height: 25.3rem;
+}
+.img-destaque button {
+  width: 3.3rem;
+  border: none;
+  background: transparent;
+  height: 2rem;
+  cursor: pointer;
+}
+.img-destaque button img {
+  width: 3.3rem;
+  height: auto;
+}
+.img-destaque .fechar {
+  width: 1.6rem;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+.container-descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.container-descricao span {
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  color: #271a45;
+  font-weight: lighter;
+}
+.container-descricao p {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #271a45;
+}
+
+.preco {
+  color: #271a45;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.container-descricao button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  width: 148px;
+  height: 32px;
+  background: transparent;
+  border: 0.5px solid #271a45;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .img-destaque img {
+    width: 33rem;
+    height: 22.3rem;
+  }
+}

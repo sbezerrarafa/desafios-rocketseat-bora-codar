@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 03</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <section class="container">
+    <div class="tipos-botoes">
+      <header>
+        <h2>Tipos de botão</h1>
+          <p>
+            Dentro de um layout, botões servem para destacar ações importantes a
+            serem tomadas. <br>Acompanhe abaixo um exemplo de tipos e propriedades.
+          </p>
+
+      </header>
+      <div>
+        <table>
+          <tr class="col-superior">
+            <th scope="col"></th>
+            <th scope="col">BOTÃO PRIMÁRIO</th>
+            <th scope="col">BOTÃO SECUNDÁRIO</th>
+            <th scope="col">BOTÃO TERCIÁRIO</th>
+            <th scope="col">CURSOR</th>
+          </tr>
+
+          <tr class="btn-default">
+            <th scope="row">DEFAULT</th>
+            <td>
+              <button class="primary">DEFAULT PRIMARY</button>
+            </td>
+            <td>
+              <button class="secondary">DEFAULT SECONDARY</button>
+            </td>
+            <td>
+              <button class="tertiary">DEFAULT TERTIARY</button>
+            </td>
+            <td>
+              <img src="./assets/pointer.png" alt="">
+            </td>
+          </tr>
+          <tr class="btn-hover">
+            <th scope="row">HOVER</th>
+            <td>
+              <button class="primary">HOVER PRIMARY</button>
+            </td>
+            <td>
+              <button class="secondary">HOVER SECONDARY</button>
+            </td>
+            <td>
+              <button class="tertiary">HOVER TERTIARY</button>
+            </td>
+            <td>
+              <img src="./assets/pointer.png" alt="">
+            </td>
+          </tr>
+          <tr class="btn-focus">
+            <th scope="row">FOCUS</th>
+            <td>
+              <button class="primary">FOCUS PRIMARY</button>
+            </td>
+            <td>
+              <button class="secondary">FOCUS SECONDARY</button>
+            </td>
+            <td>
+              <button class="tertiary">FOCUS TERTIARY</button>
+            </td>
+            <td>
+              <img src="./assets/pointer.png" alt="">
+            </td>
+          </tr>
+          <tr class="btn-disable">
+            <th scope="row">DISABLED</th>
+            <td>
+              <button class="primary">DISABLED PRIMARY</button>
+            </td>
+            <td>
+              <button class="secondary">DISABLED SECONDARY</button>
+            </td>
+            <td>
+              <button class="tertiary">DISABLED TERTIARY</button>
+            </td>
+            <td>
+              <img src="./assets/disable.png" alt="">
+            </td>
+          </tr>
+          <tr class="btn-loading">
+            <th scope="row">LOADING</th>
+            <td>
+              <button class="primary"><img src="./assets/icon-loading.png" alt=""> LOADING PRIMARY</button>
+            </td>
+            <td>
+              <button class="secondary"><img src="./assets/icon-loading.png" alt=""> LOADING SECONDARY</button>
+            </td>
+            <td>
+              <button class="tertiary"><img src="./assets/icon-loading.png" alt=""> LOADING TERTIARY</button>
+            </td>
+            <td>
+              <img src="./assets/loading.png" alt="">
+            </td>
+          </tr>
+          <tr btn="movable">
+            <th scope="row">MOVABLE</th>
+            <td>
+              <button class="primary"><img src="./assets/icon-movable.png" alt=""> MOVABLE PRIMARY</button>
+            </td>
+            <td>
+              <button class="secondary"><img src="./assets/icon-movable.png" alt=""> MOVABLE SECONDARY</button>
+            </td>
+            <td>
+              <button class="tertiary"><img src="./assets/icon-movable.png" alt=""> MOVABLE TERTIARY</button>
+            </td>
+            <td>
+              <img src="./assets/movable.png" alt="">
+            </td>
+          </tr>
+
+
+        </table>
+      </div>
+    </div>
+    <aside>
+      <div class="desc-testes-botoes">
+        <h2>Teste os botões</h2>
+        <p>Interaja com os botões e observe a mudança de aparência e de cursores</p>
+        <span>interaja com os botões que irão surgir:</span>
+      </div>
+      <div class="mostra-btns"></div>
+    </aside>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>

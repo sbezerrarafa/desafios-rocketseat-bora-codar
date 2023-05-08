@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./assets/icon.png" />
+  <title>Tempo|Clima</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+  <main class="container-geral">
+    <section class="clima-atual">
+      <div class="descricao">
+        <img id="desicone" src="https://openweathermap.org/img/wn/04n.png" alt="">
+        <p id="descricao">nublado</p>
+      </div>
+      <div class="localizacao">
+        <div class="sua-cidade">
+          <img src="./assets/pin.svg" alt="">
+          <span id="cidade">Olinda, PE</span>
+        </div>
+        <div class="form">
+          <h3>Confira o clima de uma cidade:</h3>
+          <div class="form-input-container">
+            <input type="text" placeholder="Digite o nome da cidade" id="city-input" />
+            <button id="search">
+              <img src="./assets/lupa.png" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="selecione-cidade">
+        <h2>Busque uma cidade</h2>
+      </div>
+      <div id="error-message" class="desaparecer">
+        <p>Não encontramos está cidade</p>
+      </div>
+
+      <div class="temperatura hide">
+        <div class="temp-atual">
+          <h2 id="temp-atual">18</h2>
+          <div class="celsius">°C</div>
+        </div>
+        <div class="max-min">
+          <p id="max-temp-atual">22
+          <p>°</p>
+          </p>
+          <span id="min-temp-atual">16</span>
+        </div>
+      </div>
+      <div class="rodape">
+        <div class="estatisticas vento">
+          <img src="./assets/temp-wind.svg" alt="vento">
+          <div class="info">
+            <p>Vento</p>
+            <span id="vento-atual">17 Km/h</span>
+          </div>
+        </div>
+        <div class="estatisticas umidade">
+          <img src="./assets/temp-humidity.svg" alt="vento">
+          <div class="info">
+            <p>Umidade</p>
+            <span id="umidade-atual">31</span><span>%</span>
+          </div>
+        </div>
+        <div class="estatisticas chuva">
+          <img src="./assets/temp-rain.svg" alt="vento">
+          <div class="info">
+            <p>Chuva</p>
+            <span id="possibi-chuva">10</span><span>%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qualidade-ar">
+      <div class="titulo-qualidade-ar">
+        <img src="./assets/leaf.svg" alt="">
+        <h5>Qualidade do ar</h5>
+      </div>
+      <div class="qualidade-ar-atual">
+        <p id="metricaQualidadeAr">Boa</p>
+        <span id="qualidadeAr">21</span>
+      </div>
+      <div class="info-composicao-ar">
+        <div class="number">
+          <p id="pm25">12.9</p>
+          <small>PM2.5</small>
+        </div>
+        <div class="number">
+          <p id="pm10">12.9</p>
+          <small>PM10</small>
+        </div>
+        <div class="number">
+          <p id="so2">2.1</p>
+          <small>SO₂</small>
+        </div>
+        <div class="number">
+          <p id="no2">1.4</p>
+          <small>NO₂</small>
+        </div>
+        <div class="number">
+          <p id="o3">21.2</p>
+          <small>O₃</small>
+        </div>
+        <div class="number">
+          <p id="co">0.7</p>
+          <small>CO</small>
+        </div>
+      </div>
+    </section>
+    <section class="container-horario-sol">
+      <div class="titulo-horario-sol">
+        <img src="./assets/sun-time.svg" alt="">
+        <h5>Horario do Sol</h5>
+      </div>
+      <div class="container-grafico-sol">
+        <div class="grafico-sol">
+          <div class="sombra-sol" style="width:63.5%"></div>
+        </div>
+        <div class="horario-sol-valor">12:30</div>
+        <div class="bolinha-grafico-sol" style="transform: translateX(75.8078px) translateY(-97.0296px);"></div>
+      </div>
+      <div class="base-horario-sol">
+        <div id="nascer-sol">06:10</div>
+        <div id="por-do-sol">17:08</div>
+      </div>
+    </section>
+    <section class="previsao-semanal">
+      <div class="dias-da-semana">
+        <span id="amanha_1">Amanhã</span>
+        <img src="./assets/weather-clouds.svg" alt="">
+        <div class="max-min-semana">
+          <p id="max_amanha_1">22°</p>
+          <span id="min_amanha_1">16°</span>
+        </div>
+      </div>
+      <div class="dias-da-semana">
+        <span id="amanha_2">Terça</span>
+        <img src="./assets/weather-rain.svg" alt="">
+        <div class="max-min-semana">
+          <p id="max_amanha_2">22°</p>
+          <span id="min_amanha_2">16°</span>
+        </div>
+      </div>
+      <div class="dias-da-semana">
+        <span id="amanha_3">Quarta</span>
+        <img src="./assets/weather-sun.svg" alt="">
+        <div class="max-min-semana">
+          <p id="max_amanha_3">22°</p>
+          <span id="min_amanha_3">16°</span>
+        </div>
+      </div>
+      <div class="dias-da-semana">
+        <span id="amanha_4">Quinta</span>
+        <img src="./assets/weather-thunder.svg" alt="">
+        <div class="max-min-semana">
+          <p id="max_amanha_4">22°</p>
+          <span id="min_amanha_4">16°</span>
+        </div>
+      </div>
+      <div class="dias-da-semana">
+        <span id="amanha_5">Sexta</span>
+        <img src="./assets/weather-cloudy.svg" alt="">
+        <div class="max-min-semana">
+          <p id="max_amanha_5">22°</p>
+          <span id="min_amanha_5">16°</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

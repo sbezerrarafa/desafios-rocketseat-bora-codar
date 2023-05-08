@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moedas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <section class="conversor">
+      <h2>Conversor de Moedas</h2>
+      <div class="wrapper">
+        <div class="money-wrapper">
+          <input class="amount" type="text" name="" id="fromVal" value="$1.000">
+          <div class="dropdown">
+            <select name="bandeiras" id="moeda-1" onChange="conversor()">
+              <option value="USD">USD</option>
+              <option value="BRA">BRA</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
+            <!-- <div class="selected">
+              <span class="fi fi-us fis"></span>
+              USD
+            </div>
+            <ul>
+              <li><span class="fi fi-br fis"></span>BRA</li>
+              <li><span class="fi fi-eu fis"></span>EUR</li>
+              <li><span class="fi fi-gb fis"></span>GBP</li>
+              <li><span class="fi fi-us fis"></span>USD</li>
+            </ul>
+          </div> -->
+          </div>
+        </div>
+        <div class="middle">
+          <button onclick="calcular()">
+            <img src="./assets/changeIcon.svg" alt="">
+          </button>
+        </div>
+        <div class="money-wrapper">
+          <input readonly class="amount" type="text" name="" id="toVal" value="R$5.000">
+          <div class="dropdown">
+            <!-- <div class="selected">
+              <span class="fi fi-us fis"></span>
+              USD
+            </div>
+            <ul>
+              <li><span class="fi fi-br fis"></span>BRA</li>
+              <li><span class="fi fi-eu fis"></span>EUR</li>
+              <li><span class="fi fi-gb fis"></span>GBP</li>
+              <li><span class="fi fi-us fis"></span>USD</li>
+            </ul>
+          </div> -->
+            <select name="bandeiras" id="moeda-2" onChange="conversor()">
+              <option value="BRA">BRA</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cambio">
+      <h2>Taxa de câmbio</h2>
+      <div class="wrapper">
+        <div id="chart"></div>
+        <div class="chart-controls">
+          <button>1D</button>
+          <button>5D</button>
+          <button>10N</button>
+          <button>ALL</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="/scripts.js"></script>
+</body>
+
+</html>
