@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #7c3aed;
+  font-weight: bold;
+}
+
+:root {
+  font-size: 62.5%;
+}
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 64rem auto;
+}
+.container h1 {
+  color: #1e293b;
+  font-size: 3.6rem;
+  margin-bottom: 1.6rem;
+}
+.container p {
+  color: #475569;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+.logo {
+  margin-top: 4rem;
+  margin-bottom: 11.2rem;
+}
+.container-input {
+  width: 38.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.inscrever:hover {
+  text-decoration: underline;
+}
+.bg {
+  background: url('./assets/background.svg') no-repeat center/cover;
+}
+
+form {
+  margin: 0 auto;
+}
+label,
+.label-senha {
+  color: #1e293b;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+.label-senha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.label-senha a {
+  color: #7c3aed;
+  text-decoration: none;
+}
+.button-logar {
+  background: #7c3aed;
+  color: #fff;
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  border: none;
+  margin: 3.2rem 0;
+  cursor: pointer;
+  text-align: center;
+}
+.content-password {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e2e8f0;
+  padding-right: 1rem;
+  border-radius: 0.4rem;
+}
+.content-password input {
+  border: none;
+}
+
+.content-password button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  padding: 1.6rem 1.2rem;
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.4rem;
+}
+input::placeholder {
+  color: #94a3b8;
+}
+input:focus {
+  outline: 0;
+}
+input:hover,
+.content-password:hover {
+  border-color: #7c3aed;
+}
+
+.hide {
+  display: none;
+}
+
+input:not(:placeholder-shown):invalid {
+  border-color: #c00000;
+}
+
+#msgValidaEmail {
+  color: #ed3a5a;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+}
+.button-logar:hover {
+  opacity: 0.8;
+}
+/*  pagina logado */
+
+.container-logado {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.container-logado h2 {
+  font-size: 2.4rem;
+}
+.container-logado p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 3.6rem;
+}
+.container-logo img {
+  animation: girar 3s infinite;
+}
+
+@keyframes girar {
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(240deg);
+  }
+  75% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 770px) {
+  .container {
+    grid-template-columns: auto;
+  }
+  .bg {
+    display: none;
+  }
+}

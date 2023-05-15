@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 11</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <section class="container">
+    <form>
+      <img class="logo" src="./assets/logo.png" alt="logo">
+      <h1>Acesse a plataforma</h1>
+      <p>
+        Faça login ou registre-se para começar a construir <br> seus projetos ainda
+        hoje.
+      </p>
+      <div class="container-input">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required />
+        <span id="msgValidaEmail" class="hide">Digite um e-mail válido</span>
+        <div class="label-senha">
+          <label for="password">Senha</label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+        <div class="content-password">
+          <input type="password" id="password" minlength="6" placeholder="Digite sua senha" required />
+          <button type="button">
+            <img id="oculta" src="./assets/eye-off.svg" alt="oculta" />
+            <img id="revelada" class="hide" src="./assets/eye.svg" alt="revelada" />
+          </button>
+        </div>
+        <a class="button-logar" href="./logado.html">Entrar</a>
+        <p>Ainda não tem uma conta ? <a class="inscrever" href=" #">Inscreva-se</a></p>
+      </div>
+    </form>
+    <div class="bg"></div>
+
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
