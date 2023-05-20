@@ -23,6 +23,8 @@ Desafios semanais proposto pela Rocketseat para o projeto [Bora Codar](https://b
 | 08  |      Dashboard      | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-08) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-08)  |
 | 09  | Conversor de moedas | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-09) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-09)  |
 | 10  |        Clima        | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-10) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-10)  |
+| 11  |        Login        | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-11) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-11)  |
+| 12  |    Quadro Kanbam    | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-12) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-12)  |
 
 ## 🚀 Tecnologias
 

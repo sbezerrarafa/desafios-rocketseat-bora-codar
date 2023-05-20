@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Desafio 12</title>
+</head>
+
+<body>
+  <section class="container-geral">
+    <aside>
+      <img src="./assets/logo.png" alt="">
+      <ul>
+        <li><img src="./assets/tablet-portrait.png" alt=""><a class="active" href="">Boards</a></li>
+        <li><img src="./assets/people.png" alt=""><a href="">Equipes</a></li>
+        <li><img src="./assets/document-text.png" alt=""><a href="">Relátorios</a></li>
+        <li><img src="./assets/engrenagem.png" alt=""><a href="">Ajustes</a></li>
+      </ul>
+    </aside>
+    <div class="container-kanban">
+      <header>
+        <div class="topo">
+          <div class="title-topo">
+            <label style="cursor: pointer;" for="name"><img src="./assets/lapis.png" alt=""></label>
+            <input id="name" value="Meu Kanbam">
+          </div>
+          <img class="avatar" src="./assets/Avatar.png" alt="avatar">
+        </div>
+        <div class="container-filtro">
+          <button><img src="./assets/filter.png" alt=""> Filtrar</button>
+          <label for="filtrar" class="filtrar">
+            <img src="./assets/lupa.png" alt="lupa">
+            <input type="text" id="filtrar" placeholder="Busque por cards, assuntos ou responsáveis...">
+          </label>
+        </div>
+      </header>
+      <div class="content">
+        <div class="a_fazer">
+          <div class="add-atividade">
+            <h2>A fazer</h2>
+            <button class="add_a_fazer" data-toggle="modal" data-target="#modal-criar-tarefa"><img src="./assets/plus.png" alt="add"></button>
+          </div>
+          <div class="coluna">
+            <div class="card" draggable="true">
+              <div class="topo-card">
+                <h3>#boraCodar um Kanban 🧑‍💻</h3>
+                <button id="excluir"><img src="./assets/excluir.png" alt=""></button>
+              </div>
+              <p>Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.</p>
+              <div class="tags">
+                <span>rocketseat</span>
+                <span>desafio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fazendo">
+          <h2>Fazendo</h2>
+          <div class="coluna">
+            <div class="card" draggable="true">
+              <div class="topo-card">
+                <h3>Conferir o novo desafio 🚀 </h3>
+                <button id="excluir"><img src="./assets/excluir.png" alt=""></button>
+              </div>
+              <p>Conferir o novo projeto do #boraCodar para fazê-lo da melhor maneira possível.</p>
+              <div class="tags">
+                <span>rocketseat</span>
+                <span>desafio</span>
+              </div>
+            </div>
+            <div class="card" draggable="true">
+              <div class="topo-card">
+                <h3>Ser incrível 😎</h3>
+                <button id="excluir"><img src="./assets/excluir.png" alt=""></button>
+              </div>
+              <p>Sempre me lembrar de manter minha autenticidade e espalhar amor.</p>
+              <div class="tags">
+                <span>rocketseat</span>
+                <span>desafio</span>
+              </div>
+            </div>
+            <div class="card" draggable="true">
+              <div class="topo-card">
+                <h3>Manter a ofensiva 🔥</h3>
+                <button id="excluir"><img src="./assets/excluir.png" alt=""></button>
+              </div>
+              <p>Manter minha atividade na plataforma da Rocketseat para não perder a ofensiva</p>
+              <div class="tags">
+                <span>rocketseat</span>
+                <span>desafio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feito ">
+          <h2>Feito</h2>
+          <div class="coluna">
+            <div class="card" draggable="true">
+              <div class="topo-card">
+                <h3>Almoçar 🥗</h3>
+                <button id="excluir"><img src="./assets/excluir.png" alt=""></button>
+              </div>
+              <p>Me alimentar, aproveitando um momento de descanso para recarregar minhas energias durante o almoço</p>
+              <div class="tags">
+                <span>rocketseat</span>
+                <span>desafio</span>
+              </div>
+            </div>
+            <div class="card" draggable="true">
+              <div class="topo-card">
+                <h3>#boraCodar uma página de login 🧑‍💻</h3>
+                <button id="excluir"><img src="./assets/excluir.png" alt=""></button>
+              </div>
+              <p>Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.</p>
+              <div class="tags">
+                <span>rocketseat</span>
+                <span>desafio</span>
+              </div>
+            </div>
+            <div class="card" draggable="true">
+              <div class="topo-card">
+                <h3>#boraCodar uma página de clima 🧑‍💻</h3>
+                <button id="excluir"><img src="./assets/excluir.png" alt=""></button>
+              </div>
+              <p>Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.</p>
+              <div class="tags">
+                <span>rocketseat</span>
+                <span>desafio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-criar-tarefa" tabindex="-1" role="dialog" aria-labelledby="modal-criar-tarefa" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Criar Tarefa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="criar_tarefa">
+              <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" id="titulo" placeholder="#começar um projeto">
+              </div>
+              <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" class="form-control" id="descricao" placeholder="projeto em js...">
+              </div>
+              <div class="selecionar-metas">
+                <label for="">Selecione as Tags</label>
+                <section>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">desafio</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">rocket</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">meta</label>
+                  </div>
+                </section>
+              </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn criar-meta">Criar tarefa</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
