@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+:root {
+  font-size: 62.5%;
+  background: #e3e3ed;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container-input {
+  border-radius: 0.8rem;
+  border: 1px dashed #c1b2fa;
+  background: #f3f0ff;
+  width: 44rem;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.container-input.dragover {
+  background: #ebe5ff;
+}
+
+/* inset 0 faz com que o input seja clicado em qualquer lugar */
+.container-input input {
+  all: unset;
+  opacity: 0;
+  inset: 0;
+  position: absolute;
+}
+.container-input p {
+  color: #7a5fec;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.container-input img {
+  animation: subir 0.5s infinite alternate;
+}
+@keyframes subir {
+  0% {
+    transform: translatey(10px);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
+.container-input span {
+  font-size: 1.4rem;
+  color: #746e82;
+}
+.desc-arquivo p {
+  color: #575361;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.desc-arquivo span {
+  font-size: 1.2rem;
+  color: #857e95;
+}
+.carregamento {
+  --icon-bg: #eee;
+  --icon-color: #aaa;
+  --progress-color: black;
+  --progress-text: #999;
+  display: flex;
+  gap: 1.2rem;
+  background: #fff;
+  border-radius: 0.8rem;
+  width: 44rem;
+  padding: 0.8rem;
+}
+.carregamento .icon {
+  background: var(--icon-bg);
+  display: flex;
+  border-radius: 0.4rem;
+  padding: 1.6rem 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+.carregamento .icon i {
+  font-size: 2.4rem;
+  color: var(--icon-color);
+}
+.status-envio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+.header-card {
+  display: flex;
+  justify-content: space-between;
+}
+.header-card button {
+  border: none;
+  background: transparent;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.header-card button i {
+  color: #794fed;
+  font-size: 1.6rem;
+}
+.progresso {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  line-height: 0;
+}
+.progresso progress {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.8rem;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progresso progress::-webkit-progress-bar {
+  background: #e3e3ed;
+}
+.progresso progress::-webkit-progress-value {
+  background: var(--progress-color);
+}
+
+.progresso span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--progress-text);
+}
+
+/*  colors */
+
+.upload {
+  --icon-bg: #e9e3f8;
+  --icon-color: #ac96e4;
+  --progress-color: linear-gradient(
+    90deg,
+    rgba(58, 97, 237, 0.52) 0%,
+    #7c3aed 100%
+  );
+  --progress-text: #9892a6;
+}
+
+.done {
+  --icon-bg: #daf2d9;
+  --icon-color: #73b172;
+  --progress-color: #73b172;
+  --progress-text: #4e884d;
+}
+
+.error {
+  --icon-bg: #f2d9d9;
+  --icon-color: #e36363;
+  --progress-color: transparent;
+  --progress-text: #e36363;
+}

@@ -25,6 +25,8 @@ Desafios semanais proposto pela Rocketseat para o projeto [Bora Codar](https://b
 | 10  |        Clima        | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-10) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-10)  |
 | 11  |        Login        | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-11) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-11)  |
 | 12  |    Quadro Kanbam    | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-12) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-12)  |
+| 13  |  Componente cartão  | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-13) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-13)  |
+| 14  |   Upload Arquivos   | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-14) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-14)  |
 
 ## 🚀 Tecnologias
 
@@ -32,6 +34,7 @@ Desafios semanais proposto pela Rocketseat para o projeto [Bora Codar](https://b
   <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="javascript" title ="javascript">
+  <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge" alt="React js" title ="React js">
 
 </p>
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 14</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <section class="container">
+    <label for="carregar" class="container-input">
+      <img src="./assets/CloudArrowUp.png" alt="">
+      <p>Importe seus arquivos</p>
+      <span>Arraste ou clique para fazer upload</span>
+      <input id="carregar" type="file">
+    </label>
+    <div class="carregamento upload">
+      <div class="icon">
+        <i class="ph-fill ph-file"></i>
+      </div>
+      <div class="status-envio">
+        <div class="header-card">
+          <div class="desc-arquivo">
+            <p id="nome_arquivo">Scan_23</p>
+            <span id="tamanho-inicial">30 MB /</span>
+            <span id="tamanho-total"> 74 MB</span>
+          </div>
+          <button><img src="./assets/Cancel.png" alt=""></button>
+        </div>
+        <div class="progresso">
+          <progress id="barra" value="75" max="100"></progress>
+          <span id="porcentagem">75%</span>
+        </div>
+      </div>
+    </div>
+    <div class="carregamento done ">
+      <div class="icon">
+        <i class="ph-fill ph-file"></i>
+      </div>
+      <div class="status-envio">
+        <div class="header-card">
+          <div class="desc-arquivo">
+            <p>Festa.mp4</p>
+            <span>30 MB</span>
+          </div>
+          <button><img src="./assets/Cancel.png" alt=""></button>
+        </div>
+        <div class="progresso">
+          <progress value="100" max="100"></progress>
+          <span>100%</span>
+        </div>
+      </div>
+    </div>
+    <div class="carregamento error">
+      <div class="icon">
+        <i class="ph-fill ph-file"></i>
+      </div>
+      <div class="status-envio">
+        <div class="header-card">
+          <div class="desc-arquivo">
+            <p>Praia.png</p>
+            <span>2 MB</span>
+          </div>
+          <button> <i class="ph ph-arrow-counter-clockwise"></i></button>
+        </div>
+        <div class="progresso">
+          <progress value="75" max="100"></progress>
+          <span>0%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
