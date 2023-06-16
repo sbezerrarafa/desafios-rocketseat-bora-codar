@@ -7,7 +7,7 @@ import Image from 'next/image';
 interface ICard {
   title: string;
   children?: string;
-  tipo?: 'dark' | 'ligth';
+  tipo?: 'dark' | 'ligth' | any;
   titlePlano?: string;
   valorPlano?: string;
   tipoButton?: 'transparent' | 'padrao';
