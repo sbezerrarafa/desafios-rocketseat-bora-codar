@@ -1,7 +1,7 @@
 import * as S from './style';
 import React from 'react';
 import check from '../../assets/check.svg';
-import info from '../../assets/info.svg';
+import info from '../../assets/infos.svg';
 import Image from 'next/image';
 
 interface ICard {
