@@ -35,7 +35,7 @@ export function Card(props: ICard) {
               <Image src={check} alt="check" />
               <p key={index}>{beneficio}</p>
             </S.Beneficio>
-            <Image src={info} alt="info" />
+            <Image src={info} alt="infos" />
           </S.ListaBeneficios>
         ))}
       </S.ContainerBeneficios>
