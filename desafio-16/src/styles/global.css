@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+html,
+body {
+  /* font-size: 62.5%; */
+  background: #242424;
+  min-height: 100vh;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.containers-contatos {
+  background: #1a1924;
+  padding: 40px;
+  max-height: 470px;
+  overflow-y: auto;
+}
+
+.containers-contatos::-webkit-scrollbar {
+  width: 8px;
+}
+
+.containers-contatos::-webkit-scrollbar-track {
+  background: #1a1924;
+}
+
+.containers-contatos::-webkit-scrollbar-thumb {
+  background: #282843;
+  border-radius: 4px;
+}
+
+.containers-contatos::-webkit-scrollbar-thumb:hover {
+  background: #282843;
+}

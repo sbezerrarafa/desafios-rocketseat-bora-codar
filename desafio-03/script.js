@@ -1,6 +1,8 @@
 const lines = document.querySelectorAll('tr:not(tr:first-of-type)');
 const res = document.querySelector('.mostra-btns');
 
+console.log(lines);
+
 lines.forEach((line) => {
   line.addEventListener('click', () => {
     const buttonClass = line.querySelector('th').textContent.toLowerCase();
