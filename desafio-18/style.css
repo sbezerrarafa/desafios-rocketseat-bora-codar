@@ -1,0 +1,109 @@
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+:root {
+  font-size: 62.5%;
+  background: #1e1e1e;
+}
+.container-geral {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-cards {
+  display: contents;
+}
+.card-descricao {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.card-descricao:hover {
+  transform: scale(1.1);
+}
+.card-descricao .desc-personagem {
+  border-radius: 20px;
+  background-image: url('./assets/rey_bg.png');
+  width: 43.6rem;
+  height: 60.8rem;
+  padding: 3rem;
+  color: #fff;
+  position: relative;
+}
+.desc-personagem h1 {
+  color: #ece4ef;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 2.56px;
+  text-transform: uppercase;
+}
+.desc-personagem h5 {
+  color: #d8cede;
+  font-size: 1.4rem;
+  font-weight: 400;
+  max-width: 260px;
+  margin-top: 10px;
+}
+.desc-personagem img {
+  position: absolute;
+  right: 0px;
+  bottom: 2rem;
+}
+.desc-personagem ul {
+  color: #9c83a7;
+  font-size: 1.4rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 6rem;
+}
+.desc-personagem ul li span {
+  margin-top: 0.2rem;
+  color: #d8cede;
+  font-weight: bold;
+}
+
+.desc-personagem ul li:nth-child(1) {
+  width: 170px;
+}
+.overlay-1,
+.overlay-2 {
+  width: 34.8rem;
+  height: 48.6rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-1 {
+  background: url('./assets/finn_bg.png');
+  margin-right: -20px;
+}
+
+.overlay-2 {
+  background: url('./assets/bb-8_bg.png');
+  margin-left: -20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .overlay-1 {
+    margin: 0 0 -20px 0;
+  }
+  .overlay-2 {
+    margin: -20px 0 0 0;
+  }
+}
