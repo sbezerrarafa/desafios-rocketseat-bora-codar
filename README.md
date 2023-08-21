@@ -31,6 +31,7 @@ Desafios semanais proposto pela Rocketseat para o projeto [Bora Codar](https://b
 | 16  |  Agenda Telefonica  | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-16) |                 [🏁](https://agendatelefonica-one.vercel.app/)                  |
 | 17  |     Calendário      | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-17) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-17)  |
 | 18  |   Card Personagem   | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-18) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-18)  |
+| 19  |    Card Morista     | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-19) |          [🏁](https://desafios-rocketseat-bora-codar-vtgt.vercel.app/)          |
 
 ## 🚀 Tecnologias
 
