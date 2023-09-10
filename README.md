@@ -33,7 +33,7 @@ Desafios semanais proposto pela Rocketseat para o projeto [Bora Codar](https://b
 | 18  |    Card Personagem    | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-18) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-18)  |
 | 19  |     Card Morista      | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-19) |          [🏁](https://desafios-rocketseat-bora-codar-vtgt.vercel.app/)          |
 | 20  |   Galeria com Hover   | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-20) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-20)  |
-| 21  |  Carrinho de Compras  | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-18) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-18)  |
+| 21  |  Carrinho de Compras  | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-21) |            [🏁](https://desafios-rocketseat-bora-codar.vercel.app/)             |
 | 22  |   Profile Settings    | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-22) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-22)  |
 | 23  | Formulário Multi Step | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-23) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-23)  |
 
