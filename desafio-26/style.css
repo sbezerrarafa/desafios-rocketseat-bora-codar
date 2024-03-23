@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+
+  font-weight: 400;
+  font-style: normal;
+}
+.container-geral {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 100%;
+  background: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-receita {
+  max-width: 1440px;
+}
+.container-desc-receita {
+  background-color: #feece0;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 112px 150px 56px 155px;
+  justify-content: space-around;
+}
+.desc-receita {
+  color: #58190a;
+  font-size: 38px;
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  font-family: 'Source Serif 4', serif;
+}
+.desc-receita p {
+  font-size: 72px;
+  font-weight: bold;
+}
+.porcoes {
+  display: flex;
+  font-size: 24px;
+  gap: 15px;
+  color: #9b6647;
+  align-items: center;
+}
+.porcoes input {
+  width: 32px;
+  background: transparent;
+  padding: 3px;
+  color: #9b6647;
+  font-size: 18px;
+  text-align: center;
+}
+.porcoes button {
+  border-radius: 50%;
+  border: 1px solid #9b6647;
+  height: 32px;
+  width: 32px;
+  background: transparent;
+  color: #9b6647;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container-preparo {
+  background-color: #9b6647;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  font-family: 'Source Serif 4', serif;
+  padding: 74px 0 135px 0;
+}
+.container-preparo ul,
+ol {
+  margin-left: 20px;
+  margin-top: 32px;
+  line-height: 26px;
+}
+.titulo {
+  display: flex;
+  align-items: center;
+  color: #feece0;
+  font-size: 24px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-desc-receita {
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+  .container-desc-receita img {
+    width: 40%;
+    margin-top: 50px;
+  }
+  .container-desc-receita p {
+    font-size: 26px;
+  }
+  .desc-receita {
+    font-size: 18px;
+  }
+  .container-preparo {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+}
