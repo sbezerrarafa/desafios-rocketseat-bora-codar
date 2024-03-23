@@ -38,6 +38,7 @@ Desafios semanais proposto pela Rocketseat para o projeto [Bora Codar](https://b
 | 23  | Formulário Multi Step | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-23) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-23)  |
 | 24  | Ajuste de Iluminação  | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-24) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-24)  |
 | 25  |     Player de VR      | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-25) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-25)  |
+| 26  |     Card-receita      | [👨🏿‍💻](https://github.com/sbezerrarafa/desafios-rocketseat-bora-codar/tree/main/desafio-26) | [🏁](https://sbezerrarafa.github.io/desafios-rocketseat-bora-codar/desafio-26)  |
 
 ## 🚀 Tecnologias
 
