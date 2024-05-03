@@ -38,10 +38,10 @@
         <button id="next"><img src="./assets/avancar.png" alt=""></button>
       </div>
       <div class="container-progresso">
-        <div class="barra-progresso"></div>
+        <input type="range" id="progressBar" value="0" min="0" max="100" step="1">
         <div class="tempo-musica">
-          <span>03:20</span>
-          <span>00:14</span>
+          <span id="tempoAtual">00:00</span>
+          <span id="tempoTotal">00:00</span>
         </div>
       </div>
     </div>

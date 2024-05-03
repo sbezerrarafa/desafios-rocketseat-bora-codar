@@ -76,12 +76,10 @@
   border: none;
   cursor: pointer;
 }
-.barra-progresso {
+#progressBar {
   width: 100%;
-  height: 0.8rem;
-  background: #d9d9d9;
-  border-radius: 1rem;
 }
+
 .tempo-musica {
   display: flex;
   justify-content: space-between;
