@@ -1,0 +1,16 @@
+{
+  "musicas": [
+    {
+      "title": "I Want You Back",
+      "artist": "jakson fives",
+      "imageUrl": "https://raw.githubusercontent.com/sbezerrarafa/encontro-com-feras/main/assets/jackson-fives.jpeg",
+      "audioUrl": "https://github.com/sbezerrarafa/encontro-com-feras/raw/main/assets/jackson-fives.mp3"
+    },
+    {
+      "title": "Pra onde eu irei?",
+      "artist": "Morada",
+      "imageUrl": "https://raw.githubusercontent.com/sbezerrarafa/encontro-com-feras/main/assets/morada.png",
+      "audioUrl": "https://github.com/sbezerrarafa/encontro-com-feras/raw/main/assets/Pra-onde-eu-irei.mp3"
+    }
+  ]
+}
