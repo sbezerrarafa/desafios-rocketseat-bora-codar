@@ -19,11 +19,11 @@
       <h2>Conversor de Moedas</h2>
       <div class="wrapper">
         <div class="money-wrapper">
-          <input class="amount" type="text" name="" id="fromVal" value="$1.000">
+          <input class="amount" type="number" id="fromVal" value="">
           <div class="dropdown">
             <select name="bandeiras" id="moeda-1" onChange="conversor()">
               <option value="USD">USD</option>
-              <option value="BRA">BRA</option>
+              <option value="BRL">BRA</option>
               <option value="EUR">EUR</option>
               <option value="GBP">GBP</option>
             </select>
@@ -46,7 +46,7 @@
           </button>
         </div>
         <div class="money-wrapper">
-          <input readonly class="amount" type="text" name="" id="toVal" value="R$5.000">
+          <input class="amount" type="number" id="toVal">
           <div class="dropdown">
             <!-- <div class="selected">
               <span class="fi fi-us fis"></span>
@@ -60,7 +60,7 @@
             </ul>
           </div> -->
             <select name="bandeiras" id="moeda-2" onChange="conversor()">
-              <option value="BRA">BRA</option>
+              <option value="BRL">BRA</option>
               <option value="EUR">EUR</option>
               <option value="GBP">GBP</option>
               <option value="USD">USD</option>
@@ -81,6 +81,7 @@
         </div>
       </div>
     </section>
+    <h1 id="toVal"></h1>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>

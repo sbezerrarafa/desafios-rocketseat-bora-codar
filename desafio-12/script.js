@@ -80,15 +80,21 @@ formCriarTarefa.addEventListener('submit', function (event) {
   tituloInput.value = '';
   descricaoInput.value = '';
   tagsInputs.forEach((input) => (input.checked = false));
+
+  salvarTarefas();
 });
 
 // função exluir
 
-btnExcluir.forEach((button) => {
-  button.addEventListener('click', () => {
-    const card = button.closest('.card');
-    card.style.display = 'none';
-  });
+document.addEventListener('click', function (e) {
+  const el = e.target;
+  if (el.classList.contains('excluira')) {
+    const card = el.closest('.card');
+    if (card) {
+      card.remove();
+      salvarTarefas();
+    }
+  }
 });
 
 //função filtro
@@ -114,3 +120,54 @@ function filterCards() {
     }
   }
 }
+
+function salvarTarefas() {
+  const cardtarefas = document.querySelectorAll('.card');
+  const listaDeTarefas = [];
+
+  cardtarefas.forEach((card) => {
+    const titulo = card.querySelector('.topo-card h3').textContent;
+    const descricao = card.querySelector('.card p').textContent;
+    const tags = Array.from(card.querySelectorAll('.tags span')).map(
+      (tag) => tag.textContent,
+    );
+    listaDeTarefas.push({ titulo, descricao, tags });
+  });
+  console.log(listaDeTarefas);
+  const tarefasJSON = JSON.stringify(listaDeTarefas);
+  localStorage.setItem('tarefas', tarefasJSON);
+}
+
+function carregarTarefas() {
+  const tarefas = localStorage.getItem('tarefas');
+  if (!tarefas) return;
+
+  const listaDeTarefas = JSON.parse(tarefas);
+
+  listaDeTarefas.forEach((tarefa) => {
+    const { titulo, descricao, tags } = tarefa;
+
+    const cardOriginal = document.querySelector('.card');
+    const novoCard = cardOriginal.cloneNode(true);
+    cardOriginal.parentNode.appendChild(novoCard);
+
+    const novoCardTitulo = novoCard.querySelector('.topo-card h3');
+    const novoCardDescricao = novoCard.querySelector('.card p');
+    const novoCardTags = novoCard.querySelector('.tags');
+
+    novoCardTitulo.textContent = titulo;
+    novoCardDescricao.textContent = descricao;
+
+    novoCardTags.innerHTML = '';
+    tags.forEach((tag) => {
+      const span = document.createElement('span');
+      span.textContent = tag;
+      novoCardTags.appendChild(span);
+    });
+  });
+}
+
+// Chame carregarTarefas quando a página for carregada
+document.addEventListener('DOMContentLoaded', carregarTarefas);
+
+// addTarefasSalvas();

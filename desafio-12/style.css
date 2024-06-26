@@ -228,6 +228,8 @@ aside ul li a:hover,
 
 .modal-content {
   font-size: 1.6rem;
+  padding: 10px;
+  border-radius: 10px;
 }
 .modal-content h5 {
   color: #7c3aed;

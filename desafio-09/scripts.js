@@ -84,16 +84,16 @@ const options = {
     custom: function ({ series, seriesIndex, dataPointIndex, w }) {
       return `<div class="tooltip">
     <span>${String(series[seriesIndex][dataPointIndex]).replace(
-      '.',
-      ',',
-    )}</span>
+        '.',
+        ',',
+      )}</span>
     <span>${new Date(
-      w.globals.seriesX[seriesIndex][dataPointIndex],
-    ).toLocaleDateString('pt-BR', {
-      weekday: 'short',
-      month: 'short',
-      day: 'numeric',
-    })}</span>
+        w.globals.seriesX[seriesIndex][dataPointIndex],
+      ).toLocaleDateString('pt-BR', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+      })}</span>
     </div>`;
     },
   },
@@ -102,41 +102,40 @@ const options = {
 const chart = new ApexCharts(document.querySelector('#chart'), options);
 chart.render();
 
-//  chama a api
-
-var currentSymbol = 'USD_BRL';
-var fromVal;
-var toVal;
-var convertido;
-var select_moeda_1 = document.getElementById('moeda-1');
-var select_moeda_2 = document.getElementById('moeda-2');
-
-function conversor() {
+function conversor(moedas) {
   const token = '2870|Y9bda7u9I0uvWst3MNlYsYFaQvP8kj7P';
-  const url = `https://api.invertexto.com/v1/currency/${currentSymbol}?token=${token}`;
-  fetch(url)
-    .then((res) => {
-      return res.json();
-    })
+  const url = `https://api.invertexto.com/v1/currency/${moedas}?token=${token}`;
+  return fetch(url)
+    .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      convertido = data[currentSymbol].price;
-      document.querySelector('#fromVal').value = '1';
-      document.querySelector('#toVal').value = convertido;
-
-      var temp = parseFloat(convertido).toFixed(4);
-      $('#toVal').val(temp.replace('.', ','));
+      const preco = data[moedas].price;
+      return preco;
     })
-    .catch((error) => console.log(error));
-
-  // var a = document.getElementById('opa').innerText;
-  // console.log(a, 'o que veio');
+    .catch((error) => {
+      console.log(error);
+      return null;
+    });
 }
 
-conversor();
 
 function calcular() {
-  var fromVal = document.querySelector('#fromVal').value;
-  var resultado = parseFloat(fromVal) * parseFloat(convertido.toFixed(4));
-  document.querySelector('#toVal').value = resultado;
+  var fromVal = parseFloat(document.getElementById('fromVal').value);
+  var toVal = document.getElementById('toVal');
+  var select_moeda_1 = document.getElementById('moeda-1').value;
+  var select_moeda_2 = document.getElementById('moeda-2').value;
+  var moedas = `${select_moeda_1}_${select_moeda_2}`;
+
+  conversor(moedas)
+    .then(preco => {
+      if (preco) {
+        var valorConvertido = fromVal * preco;
+        console.log('Valor inserido:', fromVal);
+        console.log('Valor convertido:', valorConvertido);
+        toVal.value = valorConvertido.toFixed(2); // Exibindo o resultado no elemento toVal
+      }
+    });
 }
+
+
+
+

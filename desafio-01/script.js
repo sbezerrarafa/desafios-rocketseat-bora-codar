@@ -1,17 +1,4 @@
-let num = "5";
-console.log(num.padStart(3, "0"));  // Saída: "005"
-
-let hour = "4";
-let minute = "9";
-console.log(`${hour.padStart(2, "0")}:${minute.padStart(2, "0")}`);  // Saída: "04:09"
-
-
-Math.floor(3.95);  // Retorna 3
-
-const escolhaTema = document.querySelectorAll('header button');
-const temaButton1 = escolhaTema[0];
-const temaButton2 = escolhaTema[1];
-const player = document.querySelector('#temas');
+// chamdando variaveis
 const buttonPlay = document.querySelector('#play');
 const buttonPause = document.querySelector('#pause');
 const progressBar = document.getElementById('progressBar');
@@ -20,27 +7,41 @@ const tempoTotal = document.getElementById("tempoTotal");
 const descMusicaTitle = document.querySelector('.desc-musica p');
 const descMusicaArtista = document.querySelector('.desc-musica span');
 const descMusicaImg = document.querySelector('.conteudo-musica img');
+const btnVoltar = document.getElementById('prev');
+const btnAvancar = document.getElementById('next')
+
+
 
 const music = new Audio();
 let interval;
 let currentTrack = 0;
+let musicData = [];
+
+//funçoes
+function fetchMusicData() {
+  fetch('https://mentoria.sjcc.dev/api')
+    .then(response => response.json())
+    .then(data => {
+      musicData = data.musicas; // Armazena os dados das músicas
+      console.log(musicData)
+      loadTrack(currentTrack);  // Carrega a primeira faixa
+
+    });
+
+}
+
+fetchMusicData()
 
 
-const musicData = [
-  {
-    "title": "I Want You Back",
-    "artist": "jakson fives",
-    "imageUrl": "https://raw.githubusercontent.com/sbezerrarafa/encontro-com-feras/main/assets/jackson-fives.jpeg",
-    "audioUrl": "https://github.com/sbezerrarafa/encontro-com-feras/raw/main/assets/jackson-fives.mp3"
-  },
-  {
-    "title": "Pra onde eu irei?",
-    "artist": "Morada",
-    "imageUrl": "https://raw.githubusercontent.com/sbezerrarafa/encontro-com-feras/main/assets/morada.png",
-    "audioUrl": "https://github.com/sbezerrarafa/encontro-com-feras/raw/main/assets/Pra-onde-eu-irei.mp3"
-  }
+function apiDoCachorro() {
+  fetch('https://dog.ceo/api/breeds/list/all')
+    .then(resposta => resposta.json())
+    .then(conteudo => {
+      console.log(conteudo, 'veio conteudo')
+    })
+}
 
-];
+apiDoCachorro()
 
 function loadTrack(trackIndex) {
   const track = musicData[trackIndex];
@@ -51,11 +52,22 @@ function loadTrack(trackIndex) {
   music.load();
 }
 
-function nextTrack() {
-  currentTrack = (currentTrack + 1) % musicData.length;
-  loadTrack(currentTrack);
-  play();
+
+function formatarTempo(segundos) {
+  const min = Math.floor(segundos / 60);
+  const seg = Math.floor(segundos % 60);
+  return `${min.toString().padStart(2, '0')}:${seg.toString().padStart(2, '0')}`;
 }
+
+function updateMusicTime() {
+  tempoAtual.textContent = formatarTempo(music.currentTime);
+  const progresso = (music.currentTime / music.duration) * 100;
+  progressBar.value = progresso;
+}
+
+music.addEventListener('loadedmetadata', function () {
+  tempoTotal.textContent = formatarTempo(music.duration);
+});
 
 function play() {
   buttonPlay.classList.add('hide');
@@ -70,35 +82,31 @@ function pause() {
   music.pause();
 }
 
-function formatarTempo(segundos) {
-  const min = Math.floor(segundos / 60);
-  const seg = Math.floor(segundos % 60);
-  return `${min.toString().padStart(2, '0')}:${seg.toString().padStart(2, '0')}`;
-}
-
-function updateMusicTime() {
-  tempoAtual.textContent = formatarTempo(music.currentTime);
-  const progresso = (music.currentTime / music.duration) * 100;
-  progressBar.value = progresso;
-}
-
-// Event listeners
-window.addEventListener('DOMContentLoaded', () => {
+function nextTrack() {
+  currentTrack = (currentTrack + 1) % musicData.length;
   loadTrack(currentTrack);
-});
+  play();
+}
+
+function previousTrack() {
+  if (currentTrack === 0) {
+    currentTrack = musicData.length - 1;
+  } else {
+    currentTrack--;
+  }
+  loadTrack(currentTrack);
+  play();
+}
 
 progressBar.addEventListener('input', function () {
   const valor = progressBar.value;
   music.currentTime = (valor / 100) * music.duration;
 });
 
-music.addEventListener('loadedmetadata', function () {
-  tempoTotal.textContent = formatarTempo(music.duration);
-});
+
+
 
 buttonPlay.addEventListener('click', play);
 buttonPause.addEventListener('click', pause);
-temaButton1.addEventListener('click', () => player.classList = 'layout-vertical');
-temaButton2.addEventListener('click', () => player.classList = 'layout-horizontal');
-
-document.querySelector('#next').addEventListener('click', nextTrack);
+btnAvancar.addEventListener('click', nextTrack);
+btnVoltar.addEventListener('click', previousTrack);
